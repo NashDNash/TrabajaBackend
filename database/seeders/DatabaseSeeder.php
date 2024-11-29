@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Database\Seeders\TrabajamonSeeder;
+use Database\Seeders\CombinationSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,7 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Combination::factory(100)->create();
+        $this->call(CombinationSeeder::class);
         $this->call(TrabajamonSeeder::class);
     }
 }
