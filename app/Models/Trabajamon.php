@@ -9,4 +9,7 @@ class Trabajamon extends Model
 {
     use HasFactory;
     protected $table = "trabajamons";
+    protected $fillable = [
+        'nombre', 'profesion', 'edad', 'vida', 'ataque', 'defensa', 'velocidad'
+    ];
 }
